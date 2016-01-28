@@ -48,6 +48,14 @@ public class DemoController : MonoBehaviour {
 			}
 		}
 
+		if (Input.GetKeyDown("2")) {
+			if (animator.GetInteger("CurrentAction") == 0) {
+				animator.SetInteger("CurrentAction", 2);
+			} else {
+				animator.SetInteger("CurrentAction", 0);
+			}
+		}
+
 		if (Input.GetMouseButtonDown(0)) {
 			animator.SetBool("Attack", true);
 			Invoke("StopAttack", 0.1f);
